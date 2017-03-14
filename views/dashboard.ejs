@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+       <!-- Latest compiled and minified CSS -->
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    	<!-- Optional theme -->
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    	<!-- Latest compiled and minified JavaScript -->
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+      sintegrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+      </script>
+  </head>
+  <body>
+    <h1 class="text-center">Log DashBoard </h1>
+    <div class="table-responsive"> 
+    <table class="table table-bordered"> 
+
+        <tr class="success">
+          <th>Hacking Attempt </th>
+          <th>Http_Method</th>
+          <th>Url</th>
+          <th>http_Version</th>
+          <th>Origion_Header</th>
+          <th>Ssl_Cipher</th>
+          <th>Ssl_protocol</th>
+          <th>Time_Stamp</th>
+          <th>Lb</th>
+          <th>ClientIpPort</th>
+          <th>BackIpport</th>
+          <th>Req_proce_time</th>
+          <th>Bac_proce_time</th>
+          <th>Res_proce_time</th>
+          <th>Elb_status_code</th>
+          <th>Backend_status_code</th>
+          <th>Received_bytes</th>
+          <th>Sent_bytes</th>
+        </tr>
+        <% for(var i=0; i< HTTP_METHOD.length ; i++) {%>             
+        <tr>
+          <td> <%= bool[i] %> </td>
+          <td> <%= HTTP_METHOD[i] %> </td>
+          <td> <%= URL[i] %> </td>
+          <td> <%= HTTP_VERSION[i] %> </td>
+          <td> <%= ORIGIN_HEADER[i] %> </td>
+          <td> <%= SSL_CIPHER[i] %> </td>
+          <td> <%= SSL_PROTOCOL[i] %> </td>
+          <td> <%= Time_Stamp[i] %> </td>
+          <td> <%= LB_NAME[i] %> </td>
+          <td> <%= CLIENT_IP_port[i] %> </td>
+          <td> <%= BACKEND_IP_port[i] %> </td>
+          <td> <%= Req_proce_time[i] %> </td>
+          <td> <%= Bac_proce_time[i] %> </td>
+          <td> <%= Res_proce_time[i] %> </td>
+          <td> <%= Elb_status_code[i] %> </td>
+          <td> <%= Backend_status_code[i] %> </td>
+          <td> <%= Received_bytes[i] %> </td>
+          <td> <%= Sent_bytes[i] %> </td>          
+        </tr>      
+        
+       <% } %>
+    </table> 
+    </div> 
+  <body>
+</html>
